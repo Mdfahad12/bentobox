@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import BentoBox from './BentoBox';
 
-function App() {
+const App = () => {
+  const overviewdataRoll = [
+    {
+      label: "column-1",
+      segment: [
+        {
+          label: "top",
+          // component: <BentoMarketShare />,
+          component: <div></div>,
+        },
+        {
+          label: "bottom",
+          // component: <BentoCoveredPops />,
+          component: <div></div>,
+        },
+      ],
+    },
+    {
+      label: "column-2",
+      segment: [
+        {
+          label: "top",
+          // component: <BentoGapToCompetition />,
+          component: <div></div>, //
+        },
+        {
+          label: "bottom",
+          // component: <BentoOnAirSites />,
+          component: <div></div>,
+        },
+      ],
+    },
+    {
+      label: "column-3",
+      segment: [
+        {
+          label: "top",
+          // component: <BentoCapexOpex />,
+          component: <div></div>, //,
+        },
+        {
+          label: "bottom",
+          // component: <BentoCallsToCare />,
+          component:  <div></div>,
+        },
+      ],
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BentoBox   dataRoll={overviewdataRoll}/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

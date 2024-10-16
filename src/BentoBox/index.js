@@ -56,6 +56,7 @@ import React, {
             <BentoLayoutColumn className="col" key={data.id || i} ref={colsRefs.current[i]}>
               <BentoLayoutBox
                 className="box"
+                
                 onClick={() => setExpansion(i + 1, 1)}
                 ref={boxRefs.current[i * 2 + 0]}
               >

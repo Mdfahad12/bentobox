@@ -14,8 +14,13 @@ export const BentoLayoutWrp = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem; 
-       @media (max-width: 61.25rem) {
-      gap: 0; 
+       @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+        gap: 0; 
+       
+    }
+          @media only screen and (max-width: 40em){
+    flex-direction:column;
+    gap:0;
     }
   }
 
@@ -31,11 +36,17 @@ export const BentoLayoutWrp = styled.div`
     position: relative;
   }
 
-  @media (max-width: 61.25rem) {
-    flex-direction: column; 
+  @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+  flex-direction:column;
     gap:0;
 
   }
+    @media only screen and (max-width: 40em){
+    flex-direction:column;
+    gap:0;
+    }
+
+}
 `;
 
 export const BentoLayoutColumn = styled.div`
@@ -47,21 +58,25 @@ export const BentoLayoutColumn = styled.div`
   flex-direction: column;
   gap: 1rem; 
   transition: flex 300ms ease-in, height 300ms ease-in;
-  @media (max-width: 61.25rem) {
+  @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
 
     gap:0;
 
   }
+      @media only screen and (max-width: 40em){
+    flex-direction:column;
+    gap:0;
+    }
 
 `;
 
 export const BentoLayoutBox = styled.div`
   cursor: pointer;
-  background-color: white;
+  background-color:#e5e5e5;
   height: 50%; 
-  transition: width 300ms ease-in, height 300ms ease-in;
-  border: 0.2rem solid #ccc; 
-  border-radius: 0.4rem;
+  transition:  height 300ms ease-in;
+  margin: 0 0 0.75rem;
+
 
 
 
